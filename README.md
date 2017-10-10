@@ -14,5 +14,5 @@ DevIL 1.8.7
 2. pkg install subversion
 3. pkg install llvm-devel
 
-# Compiled on freebsd 11.1 i386
+# Compiled on freebsd 11.1 i386 (NOT TESTED)
 # Best regard :D
