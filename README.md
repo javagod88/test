@@ -1,5 +1,5 @@
 # Hi, recently released a new version of llvm (6) and I decided to update the source of vanilla.
-The "core" folder is the most recent version of the core. Do not forget about the lib.
+The "core" folder is the most recent version of the core (without debug cores). Do not forget about the lib.
 
 1. Cryptopp 5.6.5
 2. Boost 1.65.1
@@ -13,5 +13,4 @@ The "core" folder is the most recent version of the core. Do not forget about th
 2. pkg install subversion
 3. pkg install llvm-devel
 
-# Compiled on freebsd 11.1 i386 (NOT TESTED)
-# Best regard :D
+# Compiled on freebsd 11.1 i386 (NOT TESTED) Best regard :D
