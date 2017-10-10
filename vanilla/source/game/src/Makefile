@@ -75,11 +75,6 @@ LIBS   += -lminilzo -lmd
 ############# other libs and includes
 INCDIR += -I../../../extern/boost
 
-############# openssl libs and includes
-#INCDIR += -I../../../extern/openssl
-#LIBDIR += -L../../../extern/openssl/lib
-#LIBS   += -lssl
-
 DTARGET  = $(BINDIR)/game_r$(SVN_VERSION)_debug
 RTARGET = $(BINDIR)/game_r$(SVN_VERSION)_release
 
