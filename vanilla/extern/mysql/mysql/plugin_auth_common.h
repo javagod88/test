@@ -1,5 +1,6 @@
 #ifndef MYSQL_PLUGIN_AUTH_COMMON_INCLUDED
-/* Copyright (c) 2010, 2015, Oracle and/or its affiliates. All rights reserved.
+/* Copyright (C) 2010 Sergei Golubchik and Monty Program Ab
+   Copyright (c) 2010, Oracle and/or its affiliates.
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -14,6 +15,10 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA */
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 /**
   @file
 
@@ -23,13 +28,13 @@
 #define MYSQL_PLUGIN_AUTH_COMMON_INCLUDED
 
 /** the max allowed length for a user name */
-#define MYSQL_USERNAME_LENGTH 96
+#define MYSQL_USERNAME_LENGTH 512
 
 /**
   return values of the plugin authenticate_user() method.
 */
 
-/**
+ /**
   Authentication failed, plugin internal error.
   An error occurred in the authentication plugin itself.
   These errors are reported in table performance_schema.host_cache,
@@ -82,23 +87,6 @@
   or not.
 */
 #define CR_OK_HANDSHAKE_COMPLETE -2
-
-/**
-Flag to be passed back to server from authentication plugins via
-authenticated_as when proxy mapping should be done by the server.
-*/
-#define PROXY_FLAG 0
-
-/*
-  We need HANDLE definition if on Windows. Define WIN32_LEAN_AND_MEAN (if
-  not already done) to minimize amount of imported declarations.
-*/
-#ifdef _WIN32
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-#include <windows.h>
-#endif
 
 typedef struct st_plugin_vio_info
 {
