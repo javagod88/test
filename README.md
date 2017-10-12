@@ -11,6 +11,6 @@ The "core" folder is the most recent version of the core (without debug cores). 
 
 1. pkg install gmake
 2. pkg install subversion
-3. pkg install llvm-devel
+3. pkg install clang-devel
 
 # Compiled on freebsd 11.1 i386 (NOT TESTED) Best regard :D
